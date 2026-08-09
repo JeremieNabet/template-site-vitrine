@@ -5,16 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Jérémie Nabet</title>
   <meta name="description" content="À propos de Jérémie Nabet, Senior Salesforce Full Stack Developer spécialisé en architecture, web et mobile.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jeremie-nabet.com/fr/about.html">
+  <meta property="og:title" content="About | Jérémie Nabet">
+  <meta property="og:description" content="À propos de Jérémie Nabet, Senior Salesforce Full Stack Developer spécialisé en architecture, web et mobile.">
+  <meta property="og:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="canonical" href="https://www.jeremie-nabet.com/fr/about.html">
+  <link rel="alternate" hreflang="fr" href="https://www.jeremie-nabet.com/fr/about.html">
+  <link rel="alternate" hreflang="en" href="https://www.jeremie-nabet.com/us/about.html">
+  <link rel="alternate" hreflang="he" href="https://www.jeremie-nabet.com/he/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.jeremie-nabet.com/fr/about.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="site-header">
     <div class="container header-row">
-      <a class="logo" href="/fr/">Jérémie Nabet</a>
+      <a class="logo" href="/fr/" aria-label="Retour à l'accueil">
+        <span class="logo-badge" aria-hidden="true">JN</span>
+        <span class="logo-name" aria-hidden="true" data-first-name="Jeremie Nabet"></span>
+      </a>
       <button class="menu-toggle" aria-label="Afficher le menu" aria-expanded="false" aria-controls="mainNav">
         <span></span>
         <span></span>
@@ -26,16 +41,17 @@
         <a href="/fr/#work">portfolio</a>
         <a href="/fr/#contact">contact</a>
         <span class="nav-label nav-label-languages" aria-hidden="true">Langues</span>
-        <a class="lang-link" href="/us/">en</a>
-        <a class="lang-link" href="/he/">he</a>
+        <a class="lang-link" href="/us/about.html">en</a>
+        <a class="lang-link" href="/he/about.html">he</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="section-light scroll-section is-visible">
       <div class="container split-content">
         <div class="text-col">
+          <h1 class="sr-only">À propos de Jérémie Nabet</h1>
           <h2>about.</h2>
           <p class="intro">Je suis Jérémie Nabet, Senior Salesforce Full Stack Developer basé en Israël.</p>
           <p>J’accompagne les équipes produit et techniques pour transformer des besoins complexes en solutions fiables, lisibles et maintenables. Mon approche combine architecture, exécution pragmatique et attention au détail.</p>
@@ -96,6 +112,8 @@
   </footer>
 
   <script>
+    const logo = document.querySelector(".logo");
+    const logoName = logo ? logo.querySelector(".logo-name") : null;
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".site-nav");
 
@@ -112,6 +130,61 @@
           document.body.classList.remove("nav-open");
           toggle.setAttribute("aria-expanded", "false");
         });
+      });
+    }
+
+    if (logo && logoName) {
+      let logoTimers = [];
+
+      function clearLogoTimers() {
+        logoTimers.forEach(function (timerId) {
+          clearTimeout(timerId);
+        });
+        logoTimers = [];
+      }
+
+      function runLogoNameTyping() {
+        const firstName = logoName.dataset.firstName || "Jeremie";
+        const totalDuration = 4800;
+        const rollArrivalAt = Math.round(totalDuration * 0.12);
+        const typeStep = Math.max(rollArrivalAt, 1) / firstName.length;
+        const eraseStartAt = rollArrivalAt + 3000;
+        const eraseStep = 42;
+
+        logoName.textContent = "";
+
+        for (let index = 1; index <= firstName.length; index += 1) {
+          logoTimers.push(window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, Math.round(index * typeStep)));
+        }
+
+        for (let index = firstName.length - 1; index >= 0; index -= 1) {
+          const reverseIndex = (firstName.length - 1) - index;
+          logoTimers.push(window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, eraseStartAt + (reverseIndex * eraseStep)));
+        }
+      }
+
+      logo.addEventListener("click", function (event) {
+        if (logo.getAttribute("href") && logo.getAttribute("href") !== "#top") {
+          // allow navigation; animation still runs briefly on click
+        }
+        clearLogoTimers();
+        logoName.textContent = "";
+        logo.classList.remove("is-rolling");
+        void logo.offsetWidth;
+        logo.classList.add("is-rolling");
+        runLogoNameTyping();
+      });
+
+      logo.addEventListener("animationend", function (event) {
+        if (event.animationName === "logo-roll-right" || event.animationName === "logo-roll-left") {
+          clearLogoTimers();
+          logoName.textContent = "";
+          logo.classList.remove("is-rolling");
+        }
       });
     }
   </script>

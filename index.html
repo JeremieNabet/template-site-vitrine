@@ -10,14 +10,14 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.jeremie-nabet.com/" />
+  <meta property="og:url" content="https://www.jeremie-nabet.com/fr/" />
   <meta property="og:title" content="Jérémie Nabet | Designer & Coder" />
   <meta property="og:description" content="Portfolio de Jérémie Nabet, Senior Salesforce Full Stack Developer et créateur d'expériences web et mobiles." />
   <meta property="og:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png" />
 
   <!-- X (Twitter) -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.jeremie-nabet.com/" />
+  <meta property="twitter:url" content="https://www.jeremie-nabet.com/fr/" />
   <meta property="twitter:title" content="Jérémie Nabet | Designer & Coder" />
   <meta property="twitter:description" content="Portfolio de Jérémie Nabet, Senior Salesforce Full Stack Developer et créateur d'expériences web et mobiles." />
   <meta property="twitter:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png" />
@@ -28,14 +28,14 @@
   <link rel="alternate" hreflang="x-default" href="https://www.jeremie-nabet.com/fr/">
   <meta property="og:locale" content="fr_FR">
 
-  <!-- Meta Tags Generated with https://metatags.io -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="#top" aria-label="Retour en haut de page">
@@ -59,19 +59,20 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero scroll-section" data-scroll-section>
       <div class="container">
+        <h1 class="sr-only">Jérémie Nabet — Designer & Coder</h1>
         <div class="split-face" id="splitFace">
           <a class="panel panel-left" href="#contact">
             <div class="panel-copy">
-              <h1 class="dynamic-text dynamic-text-left">designer</h1>
+              <h2 class="dynamic-text dynamic-text-left">designer</h2>
               <p class="dynamic-text dynamic-text-left">Product design, UI systems et expériences orientées usage réel.</p>
             </div>
           </a>
           <a class="panel panel-right" href="./about.html">
             <div class="panel-copy">
-              <h1 class="dynamic-text dynamic-text-right"><span>&lt;</span>coder<span>&gt;</span></h1>
+              <h2 class="dynamic-text dynamic-text-right"><span>&lt;</span>coder<span>&gt;</span></h2>
               <p class="dynamic-text dynamic-text-right">Développement propre, scalable et performant pour le web.</p>
             </div>
           </a>
@@ -86,30 +87,42 @@
         </div>
         <ul class="work-grid">
           <li class="work-card">
-            <iframe
-              src="https://www.rubens-pizza.com/fr"
-              title="Ruben's Pizza"
-              loading="lazy"
-              scrolling="no"
-              referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
+            <div class="work-media">
+              <iframe
+                src="https://www.rubens-pizza.com/fr"
+                title="Ruben's Pizza"
+                loading="lazy"
+                scrolling="no"
+                tabindex="-1"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              <a class="work-media-link" href="https://www.rubens-pizza.com" target="_blank" rel="noopener noreferrer">
+                <span>Voir le site</span>
+              </a>
+            </div>
             <div class="work-copy">
               <h3>Ruben's Pizza</h3>
-              <p>Site vitrine design et integration.</p>
+              <p>Site vitrine design et intégration.</p>
               <a class="work-link" href="https://www.rubens-pizza.com" target="_blank" rel="noopener noreferrer">Voir le site</a>
             </div>
           </li>
           <li class="work-card">
-            <iframe
-              src="https://www.elsa-ruben.com/fr"
-              title="Elsa & Ruben"
-              loading="lazy"
-              scrolling="no"
-              referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
+            <div class="work-media">
+              <iframe
+                src="https://www.elsa-ruben.com/fr"
+                title="Elsa & Ruben"
+                loading="lazy"
+                scrolling="no"
+                tabindex="-1"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              <a class="work-media-link" href="https://www.elsa-ruben.com" target="_blank" rel="noopener noreferrer">
+                <span>Voir le site</span>
+              </a>
+            </div>
             <div class="work-copy">
               <h3>Elsa & Ruben</h3>
-              <p>Site evenementiel premium et responsive.</p>
+              <p>Site événementiel premium et responsive.</p>
               <a class="work-link" href="https://www.elsa-ruben.com" target="_blank" rel="noopener noreferrer">Voir le site</a>
             </div>
           </li>
@@ -119,7 +132,7 @@
             </a>
             <div class="work-copy">
               <h3>Beth Amidrash App</h3>
-              <p>Application CRM Flutter connectee a Salesforce pour piloter contacts, actions, paiements et suivi.</p>
+              <p>Application CRM Flutter connectée à Salesforce pour piloter contacts, actions, paiements et suivi.</p>
               <a class="work-link" href="./bmky-app.html">Voir le projet</a>
             </div>
           </li>
@@ -139,15 +152,15 @@
             <div class="form-grid">
               <div class="field">
                 <label for="fullName">Nom complet *</label>
-                <input id="fullName" name="fullName" required>
+                <input id="fullName" name="fullName" autocomplete="name" required>
               </div>
               <div class="field">
                 <label for="phone">Téléphone *</label>
-                <input id="phone" name="phone" required>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
               </div>
               <div class="field">
                 <label for="company">Entreprise</label>
-                <input id="company" name="company">
+                <input id="company" name="company" autocomplete="organization">
               </div>
               <div class="field">
                 <label for="serviceType">Type de service *</label>
@@ -209,7 +222,7 @@
     const splitFace = document.getElementById("splitFace");
     const leftDynamicTexts = document.querySelectorAll(".dynamic-text-left");
     const rightDynamicTexts = document.querySelectorAll(".dynamic-text-right");
-    const coderHeading = splitFace ? splitFace.querySelector(".panel-right h1.dynamic-text-right") : null;
+    const coderHeading = splitFace ? splitFace.querySelector(".panel-right h2.dynamic-text-right") : null;
     const coderParagraph = splitFace ? splitFace.querySelector(".panel-right p.dynamic-text-right") : null;
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
@@ -280,7 +293,7 @@
       });
 
       logo.addEventListener("animationend", function (event) {
-        if (event.animationName === "logo-roll-right") {
+        if (event.animationName === "logo-roll-right" || event.animationName === "logo-roll-left") {
           clearLogoTimers();
           if (logoName) logoName.textContent = "";
           logo.classList.remove("is-rolling");
@@ -450,7 +463,7 @@
 
         splitFace.addEventListener("touchmove", function (event) {
           hasUserDrivenSplit = true;
-            const currentAxis = isMobileLayout.matches ? event.touches[0].clientY : event.touches[0].clientX;
+          const currentAxis = isMobileLayout.matches ? event.touches[0].clientY : event.touches[0].clientX;
           const delta = currentAxis - touchStartAxis;
           const rect = splitFace.getBoundingClientRect();
           const axisLength = isMobileLayout.matches ? rect.height : rect.width;
@@ -494,10 +507,17 @@
     }
 
     if (contactForm) {
+      const submitBtn = contactForm.querySelector(".submit-btn");
+      const defaultSubmitLabel = submitBtn ? submitBtn.textContent : "Envoyer la demande";
+
       contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         formStatus.textContent = "Envoi en cours...";
         formStatus.className = "form-status-message";
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Envoi...";
+        }
 
         try {
           const formData = new FormData(contactForm);
@@ -517,6 +537,11 @@
         } catch (error) {
           formStatus.textContent = error.message || "Erreur serveur pendant l'envoi.";
           formStatus.classList.add("error");
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultSubmitLabel;
+          }
         }
       });
     }

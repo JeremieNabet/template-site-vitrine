@@ -5,17 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projet BMKY App | Jérémie Nabet</title>
   <meta name="description" content="Présentation du projet BMKY App: application Flutter connectée à Salesforce pour la gestion opérationnelle du Beth Amidrash.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jeremie-nabet.com/fr/bmky-app.html">
+  <meta property="og:title" content="Projet BMKY App | Jérémie Nabet">
+  <meta property="og:description" content="Présentation du projet BMKY App: application Flutter connectée à Salesforce pour la gestion opérationnelle du Beth Amidrash.">
+  <meta property="og:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="canonical" href="https://www.jeremie-nabet.com/fr/bmky-app.html">
+  <link rel="alternate" hreflang="fr" href="https://www.jeremie-nabet.com/fr/bmky-app.html">
+  <link rel="alternate" hreflang="en" href="https://www.jeremie-nabet.com/us/bmky-app.html">
+  <link rel="alternate" hreflang="he" href="https://www.jeremie-nabet.com/he/bmky-app.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.jeremie-nabet.com/fr/bmky-app.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="/fr/" aria-label="Retour à l'accueil">
         <span class="logo-badge" aria-hidden="true">JN</span>
+        <span class="logo-name" aria-hidden="true" data-first-name="Jeremie Nabet"></span>
       </a>
       <button class="menu-toggle" aria-label="Afficher le menu" aria-expanded="false" aria-controls="mainNav">
         <span></span>
@@ -28,13 +41,13 @@
         <a href="/fr/#work">portfolio</a>
         <a href="/fr/#contact">contact</a>
         <span class="nav-label nav-label-languages" aria-hidden="true">Langues</span>
-        <a class="lang-link" href="/us/">en</a>
-        <a class="lang-link" href="/he/">he</a>
+        <a class="lang-link" href="/us/bmky-app.html">en</a>
+        <a class="lang-link" href="/he/bmky-app.html">he</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="section-light bmky-hero">
       <div class="container bmky-hero-grid">
         <div class="text-col">
@@ -163,6 +176,8 @@
   </footer>
 
   <script>
+    const logo = document.querySelector(".logo");
+    const logoName = logo ? logo.querySelector(".logo-name") : null;
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".site-nav");
 
@@ -179,6 +194,53 @@
           document.body.classList.remove("nav-open");
           toggle.setAttribute("aria-expanded", "false");
         });
+      });
+    }
+
+    if (logo && logoName) {
+      let logoTimers = [];
+
+      function clearLogoTimers() {
+        logoTimers.forEach(function (timerId) {
+          clearTimeout(timerId);
+        });
+        logoTimers = [];
+      }
+
+      function runLogoNameTyping() {
+        const firstName = logoName.dataset.firstName || "Jeremie";
+        const rollArrivalAt = Math.round(4800 * 0.12);
+        const typeStep = Math.max(rollArrivalAt, 1) / firstName.length;
+        const eraseStartAt = rollArrivalAt + 3000;
+        logoName.textContent = "";
+        for (let index = 1; index <= firstName.length; index += 1) {
+          logoTimers.push(window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, Math.round(index * typeStep)));
+        }
+        for (let index = firstName.length - 1; index >= 0; index -= 1) {
+          const reverseIndex = (firstName.length - 1) - index;
+          logoTimers.push(window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, eraseStartAt + (reverseIndex * 42)));
+        }
+      }
+
+      logo.addEventListener("click", function () {
+        clearLogoTimers();
+        logoName.textContent = "";
+        logo.classList.remove("is-rolling");
+        void logo.offsetWidth;
+        logo.classList.add("is-rolling");
+        runLogoNameTyping();
+      });
+
+      logo.addEventListener("animationend", function (event) {
+        if (event.animationName === "logo-roll-right" || event.animationName === "logo-roll-left") {
+          clearLogoTimers();
+          logoName.textContent = "";
+          logo.classList.remove("is-rolling");
+        }
       });
     }
   </script>

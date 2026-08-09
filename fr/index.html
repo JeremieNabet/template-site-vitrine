@@ -10,14 +10,14 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.jeremie-nabet.com/" />
+  <meta property="og:url" content="https://www.jeremie-nabet.com/fr/" />
   <meta property="og:title" content="Jérémie Nabet | Designer & Coder" />
   <meta property="og:description" content="Portfolio de Jérémie Nabet, Senior Salesforce Full Stack Developer et créateur d'expériences web et mobiles." />
   <meta property="og:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png" />
 
   <!-- X (Twitter) -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.jeremie-nabet.com/" />
+  <meta property="twitter:url" content="https://www.jeremie-nabet.com/fr/" />
   <meta property="twitter:title" content="Jérémie Nabet | Designer & Coder" />
   <meta property="twitter:description" content="Portfolio de Jérémie Nabet, Senior Salesforce Full Stack Developer et créateur d'expériences web et mobiles." />
   <meta property="twitter:image" content="https://www.jeremie-nabet.com/assets/Logo_Jeremie_Bleue.png" />
@@ -28,14 +28,14 @@
   <link rel="alternate" hreflang="x-default" href="https://www.jeremie-nabet.com/fr/">
   <meta property="og:locale" content="fr_FR">
 
-  <!-- Meta Tags Generated with https://metatags.io -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="#top" aria-label="Retour en haut de page">
@@ -43,7 +43,9 @@
         <span class="logo-name" aria-hidden="true" data-first-name="Jeremie Nabet"></span>
       </a>
       <button class="menu-toggle" aria-label="Afficher le menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
       <nav class="site-nav" id="mainNav">
         <span class="nav-label" aria-hidden="true">Pages</span>
@@ -57,31 +59,82 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero scroll-section" data-scroll-section>
       <div class="container">
+        <h1 class="sr-only">Jérémie Nabet — Designer & Coder</h1>
         <div class="split-face" id="splitFace">
-          <a class="panel panel-left" href="#contact"><div class="panel-copy"><h1 class="dynamic-text dynamic-text-left">designer</h1><p class="dynamic-text dynamic-text-left">Product design, UI systems et expériences orientées usage réel.</p></div></a>
-          <a class="panel panel-right" href="/fr/about.html"><div class="panel-copy"><h1 class="dynamic-text dynamic-text-right"><span>&lt;</span>coder<span>&gt;</span></h1><p class="dynamic-text dynamic-text-right">Développement propre, scalable et performant pour le web.</p></div></a>
+          <a class="panel panel-left" href="#contact">
+            <div class="panel-copy">
+              <h2 class="dynamic-text dynamic-text-left">designer</h2>
+              <p class="dynamic-text dynamic-text-left">Product design, UI systems et expériences orientées usage réel.</p>
+            </div>
+          </a>
+          <a class="panel panel-right" href="/fr/about.html">
+            <div class="panel-copy">
+              <h2 class="dynamic-text dynamic-text-right"><span>&lt;</span>coder<span>&gt;</span></h2>
+              <p class="dynamic-text dynamic-text-right">Développement propre, scalable et performant pour le web.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <section id="work" class="section-dark scroll-section" data-scroll-section>
       <div class="container">
-        <div class="section-title"><h2>Some of my latest work</h2></div>
+        <div class="section-title">
+          <h2>Some of my latest work</h2>
+        </div>
         <ul class="work-grid">
           <li class="work-card">
-            <iframe src="https://www.rubens-pizza.com/fr" title="Ruben's Pizza" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            <div class="work-copy"><h3>Ruben's Pizza</h3><p>Site vitrine design et integration.</p><a class="work-link" href="https://www.rubens-pizza.com" target="_blank" rel="noopener noreferrer">Voir le site</a></div>
+            <div class="work-media">
+              <iframe
+                src="https://www.rubens-pizza.com/fr"
+                title="Ruben's Pizza"
+                loading="lazy"
+                scrolling="no"
+                tabindex="-1"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              <a class="work-media-link" href="https://www.rubens-pizza.com" target="_blank" rel="noopener noreferrer">
+                <span>Voir le site</span>
+              </a>
+            </div>
+            <div class="work-copy">
+              <h3>Ruben's Pizza</h3>
+              <p>Site vitrine design et intégration.</p>
+              <a class="work-link" href="https://www.rubens-pizza.com" target="_blank" rel="noopener noreferrer">Voir le site</a>
+            </div>
           </li>
           <li class="work-card">
-            <iframe src="https://www.elsa-ruben.com/fr" title="Elsa & Ruben" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            <div class="work-copy"><h3>Elsa & Ruben</h3><p>Site evenementiel premium et responsive.</p><a class="work-link" href="https://www.elsa-ruben.com" target="_blank" rel="noopener noreferrer">Voir le site</a></div>
+            <div class="work-media">
+              <iframe
+                src="https://www.elsa-ruben.com/fr"
+                title="Elsa & Ruben"
+                loading="lazy"
+                scrolling="no"
+                tabindex="-1"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              <a class="work-media-link" href="https://www.elsa-ruben.com" target="_blank" rel="noopener noreferrer">
+                <span>Voir le site</span>
+              </a>
+            </div>
+            <div class="work-copy">
+              <h3>Elsa & Ruben</h3>
+              <p>Site événementiel premium et responsive.</p>
+              <a class="work-link" href="https://www.elsa-ruben.com" target="_blank" rel="noopener noreferrer">Voir le site</a>
+            </div>
           </li>
           <li class="work-card">
-            <a href="./bmky-app.html"><img src="../assets/BMKY_app/BMKY_image.jpeg" alt="Application Flutter BMKY Beth Amidrash"></a>
-            <div class="work-copy"><h3>Beth Amidrash App</h3><p>Application CRM Flutter connectee a Salesforce pour piloter contacts, actions, paiements et suivi.</p><a class="work-link" href="./bmky-app.html">Voir le projet</a></div>
+            <a href="/fr/bmky-app.html">
+              <img src="../assets/BMKY_app/BMKY_image.jpeg" alt="Application Flutter BMKY Beth Amidrash">
+            </a>
+            <div class="work-copy">
+              <h3>Beth Amidrash App</h3>
+              <p>Application CRM Flutter connectée à Salesforce pour piloter contacts, actions, paiements et suivi.</p>
+              <a class="work-link" href="/fr/bmky-app.html">Voir le projet</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -89,15 +142,40 @@
 
     <section id="contact" class="section-contact scroll-section" data-scroll-section>
       <div class="container split-content">
-        <div class="text-col"><h2>contact.</h2><p class="intro">Parlons de ton projet Salesforce, web ou mobile.</p><p>Donne-moi le contexte, tes objectifs et ton timing. Je reviens vers toi rapidement avec une proposition claire et actionnable.</p></div>
+        <div class="text-col">
+          <h2>contact.</h2>
+          <p class="intro">Parlons de ton projet Salesforce, web ou mobile.</p>
+          <p>Donne-moi le contexte, tes objectifs et ton timing. Je reviens vers toi rapidement avec une proposition claire et actionnable.</p>
+        </div>
         <div class="media-col">
           <form id="contactForm" class="contact-form" method="post" action="/api/send-mail">
             <div class="form-grid">
-              <div class="field"><label for="fullName">Nom complet *</label><input id="fullName" name="fullName" required></div>
-              <div class="field"><label for="phone">Téléphone *</label><input id="phone" name="phone" required></div>
-              <div class="field"><label for="company">Entreprise</label><input id="company" name="company"></div>
-              <div class="field"><label for="serviceType">Type de service *</label><select id="serviceType" name="serviceType" required><option value="">Sélectionnez</option><option value="salesforce">Salesforce</option><option value="web">Site web</option><option value="mobile">Application mobile</option><option value="autre">Autre</option></select></div>
-              <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Décris ton besoin, tes objectifs et ton délai."></textarea></div>
+              <div class="field">
+                <label for="fullName">Nom complet *</label>
+                <input id="fullName" name="fullName" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Téléphone *</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+              </div>
+              <div class="field">
+                <label for="company">Entreprise</label>
+                <input id="company" name="company" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="serviceType">Type de service *</label>
+                <select id="serviceType" name="serviceType" required>
+                  <option value="">Sélectionnez</option>
+                  <option value="salesforce">Salesforce</option>
+                  <option value="web">Site web</option>
+                  <option value="mobile">Application mobile</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Décris ton besoin, tes objectifs et ton délai."></textarea>
+              </div>
             </div>
             <button type="submit" class="submit-btn">Envoyer la demande</button>
             <p id="formStatus" class="form-status-message" aria-live="polite"></p>
@@ -130,7 +208,9 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7h2.35l.35-2.75H13.5V9.5c0-.8.22-1.35 1.37-1.35h1.46V5.67c-.25-.04-1.12-.11-2.13-.11-2.11 0-3.55 1.29-3.55 3.66v2.03H8.25V14h2.4v7h2.85Z"/></svg>
         </a>
       </div>
-      <a class="back-to-top-arrow" href="#top" aria-label="Remonter en haut"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5.5 4.75 12.75l1.5 1.5L11 9.5V19h2V9.5l4.75 4.75 1.5-1.5L12 5.5z"/></svg></a>
+      <a class="back-to-top-arrow" href="#top" aria-label="Remonter en haut">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5.5 4.75 12.75l1.5 1.5L11 9.5V19h2V9.5l4.75 4.75 1.5-1.5L12 5.5z"/></svg>
+      </a>
     </div>
   </footer>
 
@@ -142,7 +222,7 @@
     const splitFace = document.getElementById("splitFace");
     const leftDynamicTexts = document.querySelectorAll(".dynamic-text-left");
     const rightDynamicTexts = document.querySelectorAll(".dynamic-text-right");
-    const coderHeading = splitFace ? splitFace.querySelector(".panel-right h1.dynamic-text-right") : null;
+    const coderHeading = splitFace ? splitFace.querySelector(".panel-right h2.dynamic-text-right") : null;
     const coderParagraph = splitFace ? splitFace.querySelector(".panel-right p.dynamic-text-right") : null;
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
@@ -154,6 +234,7 @@
         document.body.classList.toggle("nav-open", isOpen);
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
+
       nav.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function () {
           nav.classList.remove("open");
@@ -163,21 +244,60 @@
       });
     }
 
-    if (logo && logoName) {
+    if (logo) {
+      let logoTimers = [];
+
+      function clearLogoTimers() {
+        logoTimers.forEach(function (timerId) {
+          clearTimeout(timerId);
+        });
+        logoTimers = [];
+      }
+
+      function runLogoNameTyping() {
+        if (!logoName) return;
+        const firstName = logoName.dataset.firstName || "Jeremie";
+        const totalDuration = 4800;
+        const rollStartAt = 0;
+        const rollArrivalAt = Math.round(totalDuration * 0.12);
+        const rollTravelDuration = Math.max(rollArrivalAt - rollStartAt, 1);
+        const typeStep = rollTravelDuration / firstName.length;
+        const eraseStartAt = rollArrivalAt + 3000;
+        const eraseStep = 42;
+
+        logoName.textContent = "";
+
+        for (let index = 1; index <= firstName.length; index += 1) {
+          const timerId = window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, rollStartAt + Math.round(index * typeStep));
+          logoTimers.push(timerId);
+        }
+
+        for (let index = firstName.length - 1; index >= 0; index -= 1) {
+          const reverseIndex = (firstName.length - 1) - index;
+          const timerId = window.setTimeout(function () {
+            logoName.textContent = firstName.slice(0, index);
+          }, eraseStartAt + (reverseIndex * eraseStep));
+          logoTimers.push(timerId);
+        }
+      }
+
       logo.addEventListener("click", function () {
+        clearLogoTimers();
+        if (logoName) logoName.textContent = "";
         logo.classList.remove("is-rolling");
         void logo.offsetWidth;
         logo.classList.add("is-rolling");
-        logoName.textContent = "";
-        const n = logoName.dataset.firstName || "Jeremie Nabet";
-        for (let i = 1; i <= n.length; i += 1) {
-          window.setTimeout(function () {
-            logoName.textContent = n.slice(0, i);
-          }, i * 35);
+        runLogoNameTyping();
+      });
+
+      logo.addEventListener("animationend", function (event) {
+        if (event.animationName === "logo-roll-right" || event.animationName === "logo-roll-left") {
+          clearLogoTimers();
+          if (logoName) logoName.textContent = "";
+          logo.classList.remove("is-rolling");
         }
-        window.setTimeout(function () {
-          logoName.textContent = "";
-        }, 3600);
       });
     }
 
@@ -238,7 +358,9 @@
 
       function updateHeroFromRatio(ratio) {
         const clamped = Math.max(0, Math.min(1, ratio));
-        const visualRatio = isMobileLayout.matches ? clamped : Math.max(0.14, Math.min(0.86, clamped));
+        const visualRatio = isMobileLayout.matches
+          ? clamped
+          : Math.max(0.14, Math.min(0.86, clamped));
         const shift = (clamped - 0.5) * 2;
         splitFace.style.setProperty("--split", String(visualRatio));
         splitFace.style.setProperty("--hero-shift", shift.toFixed(3));
@@ -274,7 +396,8 @@
           const raw = isMobileLayout.matches
             ? (((splitAxisPosition - rect.top) / (rect.height || 1)) * 100)
             : (((splitAxisPosition - rect.left) / (rect.width || 1)) * 100);
-          element.style.setProperty("--text-cut", Math.max(0, Math.min(100, raw)).toFixed(2) + "%");
+          const cut = Math.max(0, Math.min(100, raw));
+          element.style.setProperty("--text-cut", cut.toFixed(2) + "%");
         });
 
         rightDynamicTexts.forEach(function (element) {
@@ -282,7 +405,8 @@
           const raw = isMobileLayout.matches
             ? (((splitAxisPosition - rect.top) / (rect.height || 1)) * 100)
             : (((splitAxisPosition - rect.left) / (rect.width || 1)) * 100);
-          element.style.setProperty("--text-cut", Math.max(0, Math.min(100, raw)).toFixed(2) + "%");
+          const cut = Math.max(0, Math.min(100, raw));
+          element.style.setProperty("--text-cut", cut.toFixed(2) + "%");
         });
       }
 
@@ -299,6 +423,8 @@
         const mobileOffset = centeredAtTop - mobileTargetAtTop;
         const mobileScrollRatio = centeredRatio - mobileOffset;
         const scrollRatio = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+        const heroProgress = Math.max(0, Math.min(1, scrollRatio));
+        splitFace.style.setProperty("--hero-progress", heroProgress.toFixed(3));
         updateHeroFromRatio(isMobileLayout.matches ? mobileScrollRatio : scrollRatio);
       }
 
@@ -310,7 +436,6 @@
         lastPointerMoveAt = Date.now();
         updateHeroFromRatio(position / (length || 1));
       });
-
       splitFace.addEventListener("mouseleave", function () {
         updateHeroFromScroll();
       });
@@ -338,7 +463,7 @@
 
         splitFace.addEventListener("touchmove", function (event) {
           hasUserDrivenSplit = true;
-            const currentAxis = isMobileLayout.matches ? event.touches[0].clientY : event.touches[0].clientX;
+          const currentAxis = isMobileLayout.matches ? event.touches[0].clientY : event.touches[0].clientX;
           const delta = currentAxis - touchStartAxis;
           const rect = splitFace.getBoundingClientRect();
           const axisLength = isMobileLayout.matches ? rect.height : rect.width;
@@ -358,15 +483,22 @@
     const enableScrollAnimations = !window.matchMedia("(max-width: 920px)").matches;
     if (scrollSections.length > 0 && "IntersectionObserver" in window && enableScrollAnimations) {
       document.body.classList.add("js-scroll-animations");
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          } else if (entry.boundingClientRect.top > 0) {
-            entry.target.classList.remove("is-visible");
-          }
-        });
-      }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            } else if (entry.boundingClientRect.top > 0) {
+              entry.target.classList.remove("is-visible");
+            }
+          });
+        },
+        {
+          root: null,
+          threshold: 0.18,
+          rootMargin: "0px 0px -8% 0px"
+        }
+      );
 
       scrollSections.forEach(function (section, index) {
         section.style.setProperty("--section-delay", String(index * 45) + "ms");
@@ -374,26 +506,42 @@
       });
     }
 
-    if (contactForm && formStatus) {
+    if (contactForm) {
+      const submitBtn = contactForm.querySelector(".submit-btn");
+      const defaultSubmitLabel = submitBtn ? submitBtn.textContent : "Envoyer la demande";
+
       contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         formStatus.textContent = "Envoi en cours...";
         formStatus.className = "form-status-message";
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Envoi...";
+        }
+
         try {
-          const payload = Object.fromEntries(new FormData(contactForm).entries());
+          const formData = new FormData(contactForm);
+          const payload = Object.fromEntries(formData.entries());
           const response = await fetch("/api/send-mail", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
           });
+
           const text = await response.text();
           if (!response.ok) throw new Error(text || "Erreur serveur.");
-          formStatus.textContent = text || "Merci, votre demande a bien ete envoyee.";
+
+          formStatus.textContent = text || "Merci, votre demande a bien été envoyée.";
           formStatus.classList.add("success");
           contactForm.reset();
         } catch (error) {
           formStatus.textContent = error.message || "Erreur serveur pendant l'envoi.";
           formStatus.classList.add("error");
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultSubmitLabel;
+          }
         }
       });
     }
